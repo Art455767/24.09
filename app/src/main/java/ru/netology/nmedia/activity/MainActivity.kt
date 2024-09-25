@@ -78,12 +78,19 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        binding.cancel.setOnClickListener {
-                binding.content.setText("")
-                binding.editedText.text = ""
-                binding.content.clearFocus()
-                AndroidUtils.hideKeyboard(it)
-                binding.editGroup.visibility = View.GONE
+            binding.cancel.setOnClickListener {
+            binding.content.setText("")
+            binding.editedText.text = ""
+            binding.content.clearFocus()
+            AndroidUtils.hideKeyboard(it)
+            binding.editGroup.visibility = View.GONE
+            viewModel.edited.value = PostViewModel.empty 
+
+
+            
+        }
+            
+        
+            
         }
     }
-}
