@@ -51,6 +51,7 @@ class PostRepositoryInMemoryImpl : PostRepository {
         }
 
         data.value = posts
+
     }
 
     override fun shareByID(id: Long) {

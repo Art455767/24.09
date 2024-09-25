@@ -6,16 +6,7 @@ import ru.netology.nmedia.dto.Post
 import ru.netology.nmedia.repository.PostRepository
 import ru.netology.nmedia.repository.PostRepositoryInMemoryImpl
 
-/*private val empty = Post(
-   id = 0L,
-    author = "",
-    content = "",
-    published = "",
-    likedByMe = false,
-    sharedByMe = false
 
-
-)*/
 class PostViewModel : ViewModel() {
     private val repository: PostRepository = PostRepositoryInMemoryImpl()
     val data = repository.getAll()
